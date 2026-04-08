@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html{
     background-color: rgb(0, 0, 0);
     font-size: 62.5%;
@@ -5,41 +9,51 @@ html{
     padding: 0;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
 /* FORMATAÇÃO DO CABEÇARIO (MENU) */
 
 header{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgb(6, 14, 2);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 1em;
 }
 
 main{
+    width: 100%;
     min-width: 20.5em;
-    max-width: auto;
 }
 
 .logo{
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    width: 100%;
+    height: auto;
 }
 
 .menu{
-    width: 90%;
-    align-items: center;
-    
+   width: 100%;
 }
 
 .tags_menu{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     list-style-type: none;
+    padding: 0;
 }
 
 .tags_menu li{
-    font-size: 2em;
     text-transform: uppercase;
     color: aliceblue;
 }
@@ -50,12 +64,15 @@ main{
 
 .Primeira_parte{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
     background-image: url(../Imagens_background/killer.jpeg);
     background-size: cover;
     background-attachment: scroll;
     border-bottom: 7em solid black;
-    justify-content: space-evenly;
     box-shadow: 4px -4px 7px 1px rgba(255, 255, 255, 0.3);
+    padding: 2rem 1rem;
 }
 
 /* FORMATAÇÃO DA INTRUDUÇÃO A PAGINA */
@@ -65,6 +82,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    
 }
 
 .sobre{
@@ -77,6 +95,7 @@ main{
     align-items: center;
     color: white;
     max-width: 40em;
+    width: 100%;
     backdrop-filter: blur(.6em);
     font-family: 'Courier New', Courier, monospace;
     border: 0.001em solid white;
@@ -100,19 +119,21 @@ main{
 .lista_de_icones{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    margin-right: 1em;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
-    
+    gap: 1rem;
+    padding: 0;
 }
 
 .lista_de_icones a{
     display: flex;   
-    width: 100%;
+    justify-content: center;
+    width: auto;
 }
 
 .lista_de_icones img{
-        box-shadow: -2px 2px 6px 1px rgba(255, 255, 255, 0.3);
+    box-shadow: -2px 2px 6px 1px rgba(255, 255, 255, 0.3);
 }
 
 
@@ -154,6 +175,8 @@ main{
 
 .imagem_do_programador{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     color: aliceblue;
     font-size: 1.5em;
     text-transform: capitalize;
@@ -163,7 +186,8 @@ main{
     box-shadow: -2px 2px 6px 1px rgba(255, 255, 255, 0.3);
     margin-top: 3%;
     margin-bottom: 3%;
-
+    padding: 1rem;
+    width: 100%;
 }
 
 .imagem_do_programador img{
@@ -184,26 +208,27 @@ main{
 .frases{
     display: flex;
     font-family:'Times New Roman', Times, serif;
-    letter-spacing: .7em;
-    font-size: 2em;
+    font-size: 1em;
     justify-content: space-evenly;
     text-transform: uppercase;
-    color: yellowgreen;
     background-color: rgb(6, 14, 2);
     box-shadow: 4px -4px 7px 1px rgba(255, 255, 255, 0.3);
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
+    border: 1px solid green;
 
 }
 
 .base_de_tecno ul{
     display: flex;
+    flex-wrap: wrap;
     background-color: rgb(0, 0, 0);
     background-size: cover;
     backdrop-filter: blur(2px);
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
     margin-top: 7em;
 }
 
@@ -252,7 +277,7 @@ main{
     justify-content: center;
     margin-top: 5%;
     margin-bottom: 4%;
-    font-size: 5em;
+    font-size: 4em;
     text-transform: uppercase;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 0.1em;
@@ -286,16 +311,18 @@ main{
 
 .projetos_lista{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     padding: 0;
 }
 
 .projetos_lista li{
-    width: 25em;
-    height: 25em;
+    width: min(90vw, 25em);
+    height: 30em;
     list-style-type: none;
     margin-top: 5em;
-    overflow-y: scroll;
+    overflow-y: auto;
     margin-bottom: 5em;
 }
 
@@ -342,14 +369,14 @@ main{
 
 .texto_card{
     margin: auto;
-    width: 80%;
+    width: 100%;
+    padding: 1em;
 }
 
 .primeira{
     justify-items: center;
     align-items: center;
     backdrop-filter: blur(0.2em);
-    
 }
 .segunda{
     justify-items: center;
@@ -406,6 +433,7 @@ main{
     justify-content: center;
     align-content: space-around;
     width: 40%;
+    max-width: 90vw;
     padding: 1em;
     border-radius: 2em;
     text-decoration: none;
@@ -423,7 +451,7 @@ main{
 
 .icone_flutuante img{
     border-radius: 50%;
-    border: 0.01em solid white;
+    border: 0.01em solid rgb(43, 255, 0);
 }
 
 
@@ -432,6 +460,67 @@ footer, p{
    justify-content: center;
    color: white;
    margin-top: 1em;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .tags_menu li {
+        font-size: 1.6rem;
+    }
+
+    .Primeira_parte {
+        border-bottom-width: 5em;
+        gap: 1rem;
+    }
+
+    .sobre .parte_apresentacao {
+        padding: 1.5rem;
+    }
+
+    .lista_de_icones {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .imagem_do_programador {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .frases {
+        flex-wrap: wrap;
+        letter-spacing: 0.2em;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .projetos_lista {
+        gap: 1rem;
+    }
+
+    .projetos_lista li {
+        margin-top: 2rem;
+    }
+
+    .lista_de_contatos h2 {
+        font-size: 3rem;
+    }
+
+    .lista_de_contatos a {
+        width: 90%;
+    }
+
+    .icone_flutuante {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
 }
 
 
